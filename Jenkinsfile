@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        registry = "magalixcorp/k8scicd"
+        registry = "sujithcap4u/k8scicd"
         GOCACHE = "/tmp"
     }
         stages {
@@ -38,8 +38,7 @@ pipeline {
                     // Run Unit Tests.            
                 }
             }
-        
-            stages {
+            stage {
                 parallel {
                     stage('SonarQube: Code Quality') {
                         steps {
